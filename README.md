@@ -1,4 +1,4 @@
-# Smart Developer Network API [![Build Status](https://secure.travis-ci.org/bridgeutopia/smart_devnet_lite.png)](http://travis-ci.org/bridgeutopia/smart_devnet_lite)
+# Smart Developer Network API
 
 A lightweight Ruby wrapper for the REST API of SMART Developer Network.
 
