@@ -1,6 +1,6 @@
 # Smart Developer Network API [![Build Status](https://secure.travis-ci.org/bridgeutopia/smart_devnet_lite.png)](http://travis-ci.org/bridgeutopia/smart_devnet_lite)
 
-Another lghtweight Ruby wrapper for the REST API of SMART Developer Network.
+A lightweight Ruby wrapper for the REST API of SMART Developer Network.
 
 ## Requirements
 
@@ -32,7 +32,7 @@ Or install it yourself as:
       sp_service_id: '',
       path_to_cert: '')
     response = SmartDevnetLite.current.send_sms('mobile_number', "Testing API.")
-    puts response["code"], response["body"], response["full_response"]
+    puts response[:code], response[:body], response[:full_response]
 
 ## Contributing
 

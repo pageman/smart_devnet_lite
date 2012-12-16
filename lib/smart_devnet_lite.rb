@@ -41,14 +41,18 @@ class SmartDevnetLite
   end
 
   def success?(request)
-    request["code"]=="201 Created" ? request : false
+    request[:code].include?("201 Created") ? request : false
   end
 
   private
 
   def post(request)
     response = `curl --capath #{path_to_cert} -i #{headers} -X POST -d #{request} #{url}`.strip
-    { code: response.split(/\n{/).first.split(/\n/).first.gsub('HTTP/1.1', ''), full_response: response, body: response.split(/\n{/).last.strip.gsub(/\"|\n|\r|\t/, '')}
+    { code: clean(response.split(/\n{/).first.split(/\n/).first.gsub('HTTP/1.1', '')), full_response: response, body: clean(response.split(/\n{/).last)}
+  end
+
+  def clean(s)
+    s.strip.gsub(/\"|\n|\r|\t/, '')
   end
 
 end
