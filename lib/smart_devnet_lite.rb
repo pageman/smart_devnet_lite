@@ -47,7 +47,7 @@ class SmartDevnetLite
   private
 
   def post(request)
-    response = `curl --capath #{path_to_cert} -i #{headers} -X POST -d #{request} #{url}`.strip
+    response = `curl --capath #{path_to_cert} -i #{headers} -X POST -d #{request} #{url}`
     { code: clean(response.split(/\n{/).first.split(/\n/).first.gsub('HTTP/1.1', '')), full_response: response, body: clean(response.split(/\n{/).last)}
   end
 
