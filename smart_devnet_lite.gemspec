@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
   gem.version = "0.0.5"
   gem.authors = ["Katherine G. Pe"]
   gem.email = ["info@bridgeutopiaweb.com"]
-  gem.description = %q{A lightweight gem for the SMART Devnet API}
+  gem.description = %q{A lightweight gem for the SMART Devnet API that uses curl.}
   gem.summary = %q{Currently supports SMS API only}
   gem.homepage = "http://www.smart.com.ph/developer"
 

@@ -1,10 +1,32 @@
 # Smart Developer Network API
 
-A lightweight Ruby wrapper for the REST API of SMART Developer Network.
+A Ruby wrapper that uses curl for the REST API of SMART Developer Network.
+We recommend using the <a href="https://github.com/bridgeutopia/smart_devnet" target="_blank">SMART Devnet</a> gem because of its apparent advantages when it comes to returning parsed response for each request.
+This just exist for prefer something faster. The difference is trivial.
+
+## Benchmark results
+
+
+<pre>
+n = 100
+Benchmark.bm do |x|
+  x.report { SmartDevnet.current.send_sms('09296342280', "Testing API.") }
+  x.report { SmartDevnetLite.current.send_sms('09296542280', "Testing API.")  }
+end
+</pre>
+
+<pre>
+  real
+  1.285882
+  0.870235
+</pre>
+
 
 ## Requirements
 
     Ruby 1.9.x
+    curl (sudo apt-get install curl)
+
 
 ## Installation
 
