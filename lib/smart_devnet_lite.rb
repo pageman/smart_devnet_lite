@@ -1,4 +1,4 @@
-class SmartDevnet
+class SmartDevnetLite
 
   URL = "https://npwifi.smart.com.ph/1/smsmessaging/outbound/%s/requests"
 
